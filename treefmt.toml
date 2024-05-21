@@ -1,0 +1,16 @@
+[formatter.nix]
+command = "nixpkgs-fmt"
+options = []
+includes = ["*.nix"]
+excludes = []
+
+[formatter.dprint]
+command = "dprint"
+options = ["fmt"]
+includes = ["*.json", "*.md", "*.toml"]
+
+[formatter.yaml]
+command = "yamlfmt"
+options = []
+includes = ["*.yaml", "*.yml"]
+excludes = []
