@@ -5,9 +5,10 @@
     "storybook": "storybook dev -p 6006"
   },
   "dependencies": {
-    "@react-lib/utils": "workspace:*",
     "@react-lib/accordion": "workspace:*",
-    "@react-lib/use-async": "workspace:*"
+    "@react-lib/use-animation": "workspace:*",
+    "@react-lib/use-async": "workspace:*",
+    "@react-lib/utils": "workspace:*"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.4.0",

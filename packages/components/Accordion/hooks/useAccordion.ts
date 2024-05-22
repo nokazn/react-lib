@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 
-import { useAnimation } from "@react-lib/utils";
+import { useAnimation } from "@react-lib/use-animation";
 
 import type { Props } from "../Template.js";
 
