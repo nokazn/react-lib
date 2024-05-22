@@ -19,10 +19,10 @@
     "noFallthroughCasesInSwitch": true,
     "noPropertyAccessFromIndexSignature": true,
     "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true,
+    "exactOptionalPropertyTypes": true
   },
   "include": [
     "packages",
-    ".storybook",
-  ],
+    ".storybook"
+  ]
 }
