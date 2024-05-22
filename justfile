@@ -1,4 +1,5 @@
 check:
+  pnpm run check
   biome check ./packages ./.storybook
 
 check-fix:
