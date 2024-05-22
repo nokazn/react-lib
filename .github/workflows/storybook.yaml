@@ -1,0 +1,27 @@
+name: storybook
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - packages/**
+      - .storybook/**
+      - .github/**
+  workflow_dispatch:
+
+jobs:
+  storybook:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: DeterminateSystems/nix-installer-action@main
+      - uses: DeterminateSystems/magic-nix-cache-action@main
+      - uses: DeterminateSystems/flake-checker-action@main
+      - name: Build
+        run: |
+          nix develop -c pnpm run build-storybook
+      - uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build-storybook
