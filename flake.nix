@@ -24,9 +24,15 @@
           dprint
           yamlfmt
           treefmt
+          just
           nodejs
           corepack
+          biome
         ];
+
+        shellHook = ''
+          pnpm i
+        '';
       };
     });
 }

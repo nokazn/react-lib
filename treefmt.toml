@@ -13,4 +13,10 @@ includes = ["*.json", "*.md", "*.toml"]
 command = "yamlfmt"
 options = []
 includes = ["*.yaml", "*.yml"]
+excludes = ["pnpm-lock.yaml"]
+
+[formatter.biome]
+command = "biome"
+options = ["format"]
+includes = ["*.js", "*.jsx", "*.mjs", "*.mjsx", "*.ts", "*.tsx", "*.mts", "*.mtsx"]
 excludes = []
