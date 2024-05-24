@@ -1,0 +1,20 @@
+import{r as m}from"./index-CDs2tPxN.js";var E={exports:{}},f={};/**
+ * @license React
+ * react-jsx-runtime.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */var v=m,b=Symbol.for("react.element"),j=Symbol.for("react.fragment"),D=Object.prototype.hasOwnProperty,L=v.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner,S={key:!0,ref:!0,__self:!0,__source:!0};function h(e,t,s){var o,n={},r=null,i=null;s!==void 0&&(r=""+s),t.key!==void 0&&(r=""+t.key),t.ref!==void 0&&(i=t.ref);for(o in t)D.call(t,o)&&!S.hasOwnProperty(o)&&(n[o]=t[o]);if(e&&e.defaultProps)for(o in t=e.defaultProps,t)n[o]===void 0&&(n[o]=t[o]);return{$$typeof:b,type:e,key:r,ref:i,props:n,_owner:L.current}}f.Fragment=j;f.jsx=h;f.jsxs=h;E.exports=f;var a=E.exports;const x=e=>a.jsxs("details",{open:e.initialOpen,ref:e.detailsRef,style:{overflowY:"hidden"},children:[a.jsx("summary",{onClick:e.onToggle,style:{cursor:"pointer",display:"block"},children:e.summary}),a.jsx("div",{ref:e.contentRef,children:e.content})]});x.__docgenInfo={description:"",methods:[],displayName:"Template",props:{summary:{required:!0,tsType:{name:"ReactNode"},description:""},content:{required:!0,tsType:{name:"ReactNode"},description:""},detailsRef:{required:!0,tsType:{name:"RefObject",elements:[{name:"HTMLDetailsElement"}],raw:"RefObject<HTMLDetailsElement>"},description:""},contentRef:{required:!0,tsType:{name:"RefObject",elements:[{name:"HTMLDivElement"}],raw:"RefObject<HTMLDivElement>"},description:""},initialOpen:{required:!1,tsType:{name:"union",raw:"boolean | undefined",elements:[{name:"boolean"},{name:"undefined"}]},description:""},onToggle:{required:!0,tsType:{name:"MouseEventHandler",elements:[{name:"HTMLDetailsElement"}],raw:"MouseEventHandler<HTMLDetailsElement>"},description:""}}};const w=e=>{const[t,s]=m.useState(e);return{setAnimation:o=>{const{onBeforeStart:n,onFinish:r,onCancel:i,getAnimation:y}=o;s(c=>{(c==null?void 0:c.playState)==="running"&&c.cancel(),n==null||n();const l=y();return console.log("start"),l.play(),l.addEventListener("finish",()=>{r&&r(),console.log("finished")}),l.addEventListener("cancel",()=>{console.log("canceled"),i&&i()}),l})}}},H=e=>{const{isOpened:t,content:s}=e,n={height:`${s.offsetHeight}px`},r={height:0};return console.log({openedStyle:n,closedStyle:r}),t?[n,r]:[r,n]},N={duration:500,easing:"ease-out"},T="open",I=e=>{const t=e.initialOpen??!1,[s,o]=m.useState(t),n=m.useRef(null),r=m.useRef(null),{setAnimation:i}=w();return{detailsRef:n,contentRef:r,onToggle:c=>{const l=n.current,p=r.current;if(l==null||p==null)return;c.preventDefault(),o(!s);const g=()=>new Animation(new KeyframeEffect(p,H({isOpened:s,content:p}),{...N,...e.animationOptions}));i(s?{getAnimation:g,onFinish:()=>{var d;(d=n.current)==null||d.removeAttribute(T)}}:{getAnimation:g,onBeforeStart:()=>{var d;(d=n.current)==null||d.setAttribute(T,"true")}})}}},A=e=>{const{summary:t,content:s,initialOpen:o}=e,{detailsRef:n,contentRef:r,onToggle:i}=I(e);return a.jsx(x,{summary:t,content:s,initialOpen:o,detailsRef:n,contentRef:r,onToggle:i})};A.__docgenInfo={description:"",methods:[],displayName:"Accordion",props:{initialOpen:{required:!1,tsType:{name:"boolean"},description:""},animationOptions:{required:!1,tsType:{name:"KeyframeAnimationOptions"},description:""}}};const q={title:"Accordion",component:A,tags:["autodocs"],args:{}},u={args:{summary:"summary",content:a.jsx(a.Fragment,{children:a.jsx("div",{style:{backgroundColor:"grey"},children:"content"})})}};var O,_,R;u.parameters={...u.parameters,docs:{...(O=u.parameters)==null?void 0:O.docs,source:{originalSource:`{
+  args: {
+    summary: "summary",
+    content: <>
+                <div style={{
+        backgroundColor: "grey"
+      }}>
+                    content
+                </div>
+            </>
+  }
+}`,...(R=(_=u.parameters)==null?void 0:_.docs)==null?void 0:R.source}}};const M=["Default"];export{u as Default,M as __namedExportsOrder,q as default};
